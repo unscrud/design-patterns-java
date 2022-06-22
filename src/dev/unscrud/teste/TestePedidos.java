@@ -1,12 +1,8 @@
 package dev.unscrud.teste;
 
 import java.math.BigDecimal;
-import java.security.GeneralSecurityException;
-import java.time.LocalDateTime;
 
-import dev.unscrud.orcamento.Orcamento;
 import dev.unscrud.pedido.GeraPedido;
-import dev.unscrud.pedido.Pedido;
 
 public class TestePedidos {
   public static void main(String[] args) {
