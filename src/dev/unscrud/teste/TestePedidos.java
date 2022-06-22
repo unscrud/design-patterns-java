@@ -3,6 +3,7 @@ package dev.unscrud.teste;
 import java.math.BigDecimal;
 
 import dev.unscrud.pedido.GeraPedido;
+import dev.unscrud.pedido.GeraPedidoHandler;
 
 public class TestePedidos {
   public static void main(String[] args) {
@@ -10,7 +11,8 @@ public class TestePedidos {
     BigDecimal valorOrcamento = new BigDecimal(args[1]);
     int quantidadeItens = Integer.parseInt(args[2]);
 
-    GeraPedido gerador = new GeraPedido(cliente, valorOrcamento, quantidadeItens);
-    gerador.executa();
+    GeraPedido dadosDoPedido = new GeraPedido(cliente, valorOrcamento, quantidadeItens);
+    GeraPedidoHandler handler = new GeraPedidoHandler(/* dependencias */);
+    handler.executa(dadosDoPedido);
   }
 }
