@@ -3,6 +3,7 @@ package dev.unscrud.orcamento;
 import java.math.BigDecimal;
 
 import dev.unscrud.situacao.EmAnalise;
+import dev.unscrud.situacao.Finalizado;
 
 public class Orcamento {
   private BigDecimal valor;
@@ -46,5 +47,9 @@ public class Orcamento {
 
   public int getQuantidadeItens() {
     return quantidadeItens;
+  }
+
+  public boolean isFinalizado() {
+    return this.situacao instanceof Finalizado;
   }
 }
