@@ -6,6 +6,7 @@ import java.util.Arrays;
 import dev.unscrud.pedido.GeraPedido;
 import dev.unscrud.pedido.GeraPedidoHandler;
 import dev.unscrud.pedido.acao.EnviarEmailPedido;
+import dev.unscrud.pedido.acao.LogDePedido;
 import dev.unscrud.pedido.acao.SalvarPedidoNoBancoDeDados;
 
 public class TestePedidos {
@@ -16,7 +17,7 @@ public class TestePedidos {
 
     GeraPedido dadosDoPedido = new GeraPedido(cliente, valorOrcamento, quantidadeItens);
     GeraPedidoHandler handler = new GeraPedidoHandler(
-        Arrays.asList(new SalvarPedidoNoBancoDeDados(), new EnviarEmailPedido()));
+        Arrays.asList(new SalvarPedidoNoBancoDeDados(), new EnviarEmailPedido(), new LogDePedido()));
     handler.executa(dadosDoPedido);
   }
 }
